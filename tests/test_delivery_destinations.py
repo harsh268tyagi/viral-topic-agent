@@ -16,18 +16,18 @@ example tests in ``tests/test_digest_service.py``.
 
 from __future__ import annotations
 
-from viral_topic_agent.delivery import (
+from delivery import (
     EmailDeliverer,
     InMemoryDeliverer,
     NotionDeliverer,
     SlackDeliverer,
 )
-from viral_topic_agent.delivery.digest_service import (
+from delivery.digest_service import (
     STATUS_NO_DESTINATION_CONFIGURED,
     DeliveryResult,
     DigestService,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     CompetitorSpike,
     Configuration,
     DeliveryDestination,

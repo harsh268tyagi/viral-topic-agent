@@ -18,8 +18,8 @@ from __future__ import annotations
 
 import pytest
 
-from viral_topic_agent.domain import models as m
-from viral_topic_agent.persistence.config_store import (
+from domain import models as m
+from persistence.config_store import (
     CONFIG_INVALID,
     CONFIG_MISSING,
     SAVE_FAILED,
@@ -32,7 +32,7 @@ from viral_topic_agent.persistence.config_store import (
     deserialize_config,
     serialize_config,
 )
-from viral_topic_agent.infrastructure.result import Err, Ok
+from infrastructure.result import Err, Ok
 
 
 # ---------------------------------------------------------------------------

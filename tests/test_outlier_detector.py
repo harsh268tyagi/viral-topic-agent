@@ -20,8 +20,8 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 
-from viral_topic_agent.domain.models import Confidence, VideoFormat, VideoStats
-from viral_topic_agent.analysis.outlier_detector import OutlierDetector
+from domain.models import Confidence, VideoFormat, VideoStats
+from analysis.outlier_detector import OutlierDetector
 
 
 # ---------------------------------------------------------------------------

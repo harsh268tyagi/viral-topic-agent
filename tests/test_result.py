@@ -8,7 +8,7 @@ import pytest
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.infrastructure.result import Err, Ok, UnwrapError
+from infrastructure.result import Err, Ok, UnwrapError
 
 
 # ---------------------------------------------------------------------------

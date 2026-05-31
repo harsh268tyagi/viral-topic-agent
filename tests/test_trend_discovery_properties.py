@@ -24,18 +24,18 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.infrastructure.datasource import (
+from infrastructure.datasource import (
     DataRequest,
     DataSourceFailure,
     FailureClassification,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     ChannelCategory,
     TimeWindow,
     ViralTemplate,
 )
-from viral_topic_agent.infrastructure.result import Err, Ok, Result
-from viral_topic_agent.analysis.trend_discovery import TrendDiscoveryEngine
+from infrastructure.result import Err, Ok, Result
+from analysis.trend_discovery import TrendDiscoveryEngine
 
 # ---------------------------------------------------------------------------
 # Test double

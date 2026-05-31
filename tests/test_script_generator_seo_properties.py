@@ -29,14 +29,14 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.generation import InMemoryGenerationProvider
-from viral_topic_agent.domain.models import (
+from generation import InMemoryGenerationProvider
+from domain.models import (
     ChannelCategory,
     ContentIdea,
     TimeWindow,
     ViralTemplate,
 )
-from viral_topic_agent.generation.script_generator import (
+from generation.script_generator import (
     MAX_SEO_TAGS,
     MIN_SEO_TAGS,
     ScriptGenerator,

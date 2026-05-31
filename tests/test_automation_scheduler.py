@@ -18,15 +18,15 @@ Requirements exercised: 14.1, 14.4, 14.7.
 
 from __future__ import annotations
 
-from viral_topic_agent.orchestration.automation_scheduler import (
+from orchestration.automation_scheduler import (
     DIGEST_DELIVERY,
     FIELD_RECURRENCE_INTERVAL,
     FIELD_RUN_TIME,
     STEP_ORDER,
     AutomationScheduler,
 )
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.domain.models import (
+from infrastructure.clock import FakeClock
+from domain.models import (
     Configuration,
     Schedule,
     StepStatus,

@@ -56,67 +56,67 @@ The suite includes:
 
 ## Project Structure
 
-The package is organized into layered subpackages. Domain logic depends only
-inward (toward more abstract layers); infrastructure concerns sit at the edges.
+The layers are top-level packages directly under `src/` (no wrapping package).
+Domain logic depends only inward (toward more abstract layers); infrastructure
+concerns sit at the edges.
 
 ```
 viral-topic-agent/
 ├── pyproject.toml
 ├── README.md
 ├── docs/
-│   └── KNOWLEDGE.md                  # architecture, components, properties (start here)
-├── src/viral_topic_agent/
-│   ├── __init__.py                   # package version
-│   ├── domain/                       # immutable core data models + enums
+│   └── KNOWLEDGE.md              # architecture, components, properties (start here)
+├── src/
+│   ├── domain/                   # immutable core data models + enums (carries __version__)
 │   │   └── models.py
-│   ├── infrastructure/               # cross-cutting primitives + external boundary
-│   │   ├── clock.py                  # injectable Clock (RealClock / FakeClock)
-│   │   ├── result.py                 # Result[T, E] (Ok / Err)
-│   │   ├── datasource.py             # DataSource protocol + error hierarchy
+│   ├── infrastructure/           # cross-cutting primitives + external boundary
+│   │   ├── clock.py              # injectable Clock (RealClock / FakeClock)
+│   │   ├── result.py             # Result[T, E] (Ok / Err)
+│   │   ├── datasource.py         # DataSource protocol + error hierarchy
 │   │   └── resilient_data_source.py  # retry / rate-limit / timeout layer
-│   ├── persistence/                  # configuration storage ("db" layer)
-│   │   └── config_store.py           # (de)serialization + ConfigurationStore
-│   ├── connection/                   # channel authorization lifecycle
+│   ├── persistence/              # configuration storage ("db" layer)
+│   │   └── config_store.py       # (de)serialization + ConfigurationStore
+│   ├── connection/               # channel authorization lifecycle
 │   │   └── connection_manager.py
-│   ├── analysis/                     # pure transformations over retrieved data
-│   │   ├── baseline.py               # shared median baseline computation
-│   │   ├── channel_analyzer.py       # owned-channel profile
-│   │   ├── trend_discovery.py        # trend / viral idea discovery
-│   │   ├── category_filter.py        # category-based filtering
-│   │   ├── scoring.py                # idea scoring + ranking
-│   │   ├── competitor_tracker.py     # competitor monitoring + spikes
-│   │   ├── outlier_detector.py       # outlier video detection
-│   │   ├── seo_analyzer.py           # keyword-gap analysis
-│   │   ├── publish_time_predictor.py # best publish day / window
-│   │   └── format_recommender.py     # Short vs long-form
-│   ├── generation/                   # creative assets via a provider interface
-│   │   ├── provider.py               # GenerationProvider interface + stub
-│   │   ├── concept_generator.py      # title / thumbnail concepts
-│   │   └── script_generator.py       # script / SEO tags / description
-│   ├── delivery/                     # report compilation + delivery
-│   │   ├── deliverer.py              # Deliverer interface + per-destination stubs
-│   │   └── digest_service.py         # digest report + delivery policy
-│   └── orchestration/                # end-to-end pipeline
+│   ├── analysis/                 # pure transformations over retrieved data
+│   │   ├── baseline.py           # shared median baseline computation
+│   │   ├── channel_analyzer.py   # owned-channel profile
+│   │   ├── trend_discovery.py    # trend / viral idea discovery
+│   │   ├── category_filter.py    # category-based filtering
+│   │   ├── scoring.py            # idea scoring + ranking
+│   │   ├── competitor_tracker.py # competitor monitoring + spikes
+│   │   ├── outlier_detector.py   # outlier video detection
+│   │   ├── seo_analyzer.py       # keyword-gap analysis
+│   │   ├── publish_time_predictor.py  # best publish day / window
+│   │   └── format_recommender.py # Short vs long-form
+│   ├── generation/               # creative assets via a provider interface
+│   │   ├── provider.py           # GenerationProvider interface + stub
+│   │   ├── concept_generator.py  # title / thumbnail concepts
+│   │   └── script_generator.py   # script / SEO tags / description
+│   ├── delivery/                 # report compilation + delivery
+│   │   ├── deliverer.py          # Deliverer interface + per-destination stubs
+│   │   └── digest_service.py     # digest report + delivery policy
+│   └── orchestration/            # end-to-end pipeline
 │       └── automation_scheduler.py
 └── tests/
 ```
 
 Each layer's `__init__.py` documents its responsibility. The `generation` and
 `delivery` packages re-export their public symbols, so both
-`from viral_topic_agent.generation import ScriptGenerator` and
-`from viral_topic_agent.generation.script_generator import ScriptGenerator`
-work.
+`from generation import ScriptGenerator` and
+`from generation.script_generator import ScriptGenerator` work. The project
+version lives at `domain.__version__`.
 
 ## Quick Start
 
 The pipeline is wired together by `AutomationScheduler`. With dependency injection you can run it against any `DataSource` implementation:
 
 ```python
-from viral_topic_agent.orchestration.automation_scheduler import AutomationScheduler
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
-from viral_topic_agent.infrastructure.clock import RealClock
-from viral_topic_agent.delivery import EmailDeliverer, SlackDeliverer
-from viral_topic_agent.domain.models import Configuration, DeliveryDestination, Schedule
+from orchestration.automation_scheduler import AutomationScheduler
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from infrastructure.clock import RealClock
+from delivery import EmailDeliverer, SlackDeliverer
+from domain.models import Configuration, DeliveryDestination, Schedule
 
 # `my_data_source` implements the DataSource protocol (see datasource.py).
 source = ResilientDataSource(my_data_source, RetryPolicy(), RealClock())

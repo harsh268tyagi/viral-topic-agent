@@ -19,7 +19,7 @@ from __future__ import annotations
 
 import pytest
 
-from viral_topic_agent.generation.concept_generator import (
+from generation.concept_generator import (
     MAX_OVERLAY_CHARS,
     MAX_TITLE_CHARS,
     MIN_THUMBNAILS,
@@ -30,14 +30,14 @@ from viral_topic_agent.generation.concept_generator import (
     ConceptError,
     ConceptGenerator,
 )
-from viral_topic_agent.generation import (
+from generation import (
     OP_THUMBNAILS,
     OP_TITLES,
     GenerationError,
     InMemoryGenerationProvider,
     ThumbnailDraft,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     ChannelCategory,
     ConceptSet,
     ContentIdea,

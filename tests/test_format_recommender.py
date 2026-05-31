@@ -18,11 +18,11 @@ from __future__ import annotations
 
 import pytest
 
-from viral_topic_agent.analysis.format_recommender import (
+from analysis.format_recommender import (
     MIN_VIDEOS_PER_FORMAT,
     FormatRecommender,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     ChannelCategory,
     ContentIdea,
     FormatResult,

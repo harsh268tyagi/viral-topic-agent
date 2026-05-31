@@ -19,7 +19,7 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 
-from viral_topic_agent.domain.models import (
+from domain.models import (
     AudienceActivity,
     ChannelCategory,
     ChannelMetadata,

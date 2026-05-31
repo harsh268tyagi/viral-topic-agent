@@ -18,8 +18,8 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.analysis.category_filter import CategoryFilter
-from viral_topic_agent.domain.models import (
+from analysis.category_filter import CategoryFilter
+from domain.models import (
     ChannelCategory,
     ContentIdea,
     TimeWindow,

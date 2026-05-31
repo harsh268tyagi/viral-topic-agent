@@ -18,7 +18,7 @@ from __future__ import annotations
 
 import pytest
 
-from viral_topic_agent.infrastructure.datasource import (
+from infrastructure.datasource import (
     DataOperation,
     DataRequest,
     DataSource,
@@ -30,7 +30,7 @@ from viral_topic_agent.infrastructure.datasource import (
     TimeoutError,
     TransientError,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     AudienceActivity,
     ChannelCategory,
     ChannelMetadata,

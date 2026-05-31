@@ -19,7 +19,7 @@ from __future__ import annotations
 
 import pytest
 
-from viral_topic_agent.generation import (
+from generation import (
     GENERATION_OPERATIONS,
     OP_DESCRIPTION,
     OP_OUTLINE,
@@ -31,7 +31,7 @@ from viral_topic_agent.generation import (
     InMemoryGenerationProvider,
     ThumbnailDraft,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     ChannelCategory,
     ContentIdea,
     TimeWindow,

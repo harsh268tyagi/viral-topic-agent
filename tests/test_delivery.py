@@ -8,7 +8,7 @@ confirms the supported destinations are exactly email, Slack, Notion (13.5).
 
 import pytest
 
-from viral_topic_agent.delivery import (
+from delivery import (
     Deliverer,
     DeliveryError,
     EmailDeliverer,
@@ -16,7 +16,7 @@ from viral_topic_agent.delivery import (
     NotionDeliverer,
     SlackDeliverer,
 )
-from viral_topic_agent.domain.models import DeliveryDestination, DigestReport, DigestSection
+from domain.models import DeliveryDestination, DigestReport, DigestSection
 
 
 # ---------------------------------------------------------------------------

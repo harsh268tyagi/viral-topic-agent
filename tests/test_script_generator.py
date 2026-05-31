@@ -21,7 +21,7 @@ from dataclasses import dataclass
 
 import pytest
 
-from viral_topic_agent.generation import (
+from generation import (
     OP_DESCRIPTION,
     OP_OUTLINE,
     OP_SCRIPT,
@@ -29,14 +29,14 @@ from viral_topic_agent.generation import (
     InMemoryGenerationProvider,
     ThumbnailDraft,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     ChannelCategory,
     ContentIdea,
     ScriptBundle,
     TimeWindow,
     ViralTemplate,
 )
-from viral_topic_agent.generation.script_generator import (
+from generation.script_generator import (
     MAX_DESCRIPTION_CHARS,
     MAX_SEO_TAGS,
     MIN_DESCRIPTION_CHARS,

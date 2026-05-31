@@ -29,25 +29,25 @@ from __future__ import annotations
 
 import time
 
-from viral_topic_agent.analysis.channel_analyzer import ChannelAnalyzer
-from viral_topic_agent.infrastructure.clock import RealClock
-from viral_topic_agent.connection.connection_manager import (
+from analysis.channel_analyzer import ChannelAnalyzer
+from infrastructure.clock import RealClock
+from connection.connection_manager import (
     ConnectionManager,
     InMemoryCredentialStore,
 )
-from viral_topic_agent.infrastructure.datasource import DataOperation, DataRequest
-from viral_topic_agent.generation import InMemoryGenerationProvider
-from viral_topic_agent.domain.models import (
+from infrastructure.datasource import DataOperation, DataRequest
+from generation import InMemoryGenerationProvider
+from domain.models import (
     AuthorizedChannel,
     ChannelCategory,
     ContentIdea,
     TimeWindow,
     ViralTemplate,
 )
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
-from viral_topic_agent.generation.script_generator import ScriptGenerator
-from viral_topic_agent.analysis.seo_analyzer import MAX_CANDIDATE_KEYWORDS, SEOAnalyzer
-from viral_topic_agent.analysis.trend_discovery import TrendDiscoveryEngine
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from generation.script_generator import ScriptGenerator
+from analysis.seo_analyzer import MAX_CANDIDATE_KEYWORDS, SEOAnalyzer
+from analysis.trend_discovery import TrendDiscoveryEngine
 
 from .integration_support import StubDataSource
 

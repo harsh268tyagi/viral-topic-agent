@@ -25,22 +25,22 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.connection.connection_manager import (
+from infrastructure.clock import FakeClock
+from connection.connection_manager import (
     ConnectionManager,
     InMemoryCredentialStore,
 )
-from viral_topic_agent.infrastructure.datasource import (
+from infrastructure.datasource import (
     DataOperation,
     DataRequest,
     TransientError,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     AuthorizationGrant,
     AuthStatus,
     Configuration,
 )
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
 
 
 # ---------------------------------------------------------------------------

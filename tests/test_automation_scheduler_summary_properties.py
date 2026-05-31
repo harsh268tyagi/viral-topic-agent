@@ -21,8 +21,8 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.orchestration.automation_scheduler import STEP_DEPENDENCIES, STEP_ORDER
-from viral_topic_agent.domain.models import StepStatus
+from orchestration.automation_scheduler import STEP_DEPENDENCIES, STEP_ORDER
+from domain.models import StepStatus
 
 from .scheduler_support import TickingClock, make_config, make_scheduler
 

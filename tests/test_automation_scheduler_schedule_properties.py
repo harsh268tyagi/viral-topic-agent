@@ -20,12 +20,12 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.orchestration.automation_scheduler import (
+from orchestration.automation_scheduler import (
     FIELD_RECURRENCE_INTERVAL,
     FIELD_RUN_TIME,
     AutomationScheduler,
 )
-from viral_topic_agent.domain.models import Configuration, Schedule
+from domain.models import Configuration, Schedule
 
 
 # ---------------------------------------------------------------------------

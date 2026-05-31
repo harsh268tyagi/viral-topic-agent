@@ -26,14 +26,14 @@ from dataclasses import dataclass, field
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.generation import InMemoryGenerationProvider, ThumbnailDraft
-from viral_topic_agent.domain.models import (
+from generation import InMemoryGenerationProvider, ThumbnailDraft
+from domain.models import (
     ChannelCategory,
     ContentIdea,
     TimeWindow,
     ViralTemplate,
 )
-from viral_topic_agent.generation.script_generator import (
+from generation.script_generator import (
     MAX_DESCRIPTION_CHARS,
     MIN_DESCRIPTION_CHARS,
     ScriptGenerator,

@@ -27,16 +27,16 @@ from datetime import datetime, timedelta, timezone
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.analysis.baseline import compute_baseline_view_count
-from viral_topic_agent.analysis.channel_analyzer import ChannelAnalyzer
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.infrastructure.datasource import DataSource
-from viral_topic_agent.domain.models import (
+from analysis.baseline import compute_baseline_view_count
+from analysis.channel_analyzer import ChannelAnalyzer
+from infrastructure.clock import FakeClock
+from infrastructure.datasource import DataSource
+from domain.models import (
     ChannelCategory,
     ChannelMetadata,
     VideoStats,
 )
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
 
 # The analyzer computes the owned-channel baseline over the most-recent 30
 # videos; mirror that cap here when independently recomputing the expected

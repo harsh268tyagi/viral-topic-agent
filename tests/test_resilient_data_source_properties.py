@@ -21,8 +21,8 @@ import pytest
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.infrastructure.datasource import (
+from infrastructure.clock import FakeClock
+from infrastructure.datasource import (
     DataOperation,
     DataRequest,
     FailureClassification,
@@ -31,7 +31,7 @@ from viral_topic_agent.infrastructure.datasource import (
     TimeoutError,
     TransientError,
 )
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
 
 
 # ---------------------------------------------------------------------------

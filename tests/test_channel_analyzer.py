@@ -20,19 +20,19 @@ Requirements exercised: 2.1, 2.5, 2.6.
 
 from __future__ import annotations
 
-from viral_topic_agent.analysis.channel_analyzer import ChannelAnalyzer, DataRetrievalError
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.infrastructure.datasource import (
+from analysis.channel_analyzer import ChannelAnalyzer, DataRetrievalError
+from infrastructure.clock import FakeClock
+from infrastructure.datasource import (
     DataSource,
     NonTransientError,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     ChannelCategory,
     ChannelMetadata,
     Confidence,
     VideoStats,
 )
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
 
 
 # ---------------------------------------------------------------------------

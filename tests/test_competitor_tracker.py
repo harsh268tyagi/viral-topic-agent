@@ -19,11 +19,11 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.analysis.competitor_tracker import CompetitorTracker
-from viral_topic_agent.infrastructure.datasource import DataSource, NonTransientError
-from viral_topic_agent.domain.models import Configuration, VideoStats
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from infrastructure.clock import FakeClock
+from analysis.competitor_tracker import CompetitorTracker
+from infrastructure.datasource import DataSource, NonTransientError
+from domain.models import Configuration, VideoStats
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
 
 
 # ---------------------------------------------------------------------------

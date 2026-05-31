@@ -13,7 +13,7 @@ import pytest
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.domain import models as m
+from domain import models as m
 
 
 # ---------------------------------------------------------------------------

@@ -21,7 +21,7 @@ from __future__ import annotations
 
 from typing import Iterable
 
-from viral_topic_agent.orchestration.automation_scheduler import (
+from orchestration.automation_scheduler import (
     CATEGORY_FILTER,
     CHANNEL_ANALYSIS,
     COMPETITOR_TRACKING,
@@ -31,8 +31,8 @@ from viral_topic_agent.orchestration.automation_scheduler import (
     TREND_DISCOVERY,
     AutomationScheduler,
 )
-from viral_topic_agent.analysis.channel_analyzer import DataRetrievalError
-from viral_topic_agent.domain.models import (
+from analysis.channel_analyzer import DataRetrievalError
+from domain.models import (
     BaselineResult,
     ChannelCategory,
     ChannelProfile,
@@ -45,7 +45,7 @@ from viral_topic_agent.domain.models import (
     OutlierResult,
     Schedule,
 )
-from viral_topic_agent.infrastructure.result import Err, Ok
+from infrastructure.result import Err, Ok
 
 
 # ---------------------------------------------------------------------------

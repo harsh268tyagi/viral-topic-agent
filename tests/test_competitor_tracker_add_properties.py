@@ -26,8 +26,8 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.analysis.competitor_tracker import CompetitorTracker
-from viral_topic_agent.domain.models import Configuration
+from analysis.competitor_tracker import CompetitorTracker
+from domain.models import Configuration
 
 # Keep generated id sets comfortably below the 50-competitor cap so the
 # property exercises the "within the limit" regime (6.1), not the rejection

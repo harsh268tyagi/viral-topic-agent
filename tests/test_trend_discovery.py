@@ -20,20 +20,20 @@ from __future__ import annotations
 
 import pytest
 
-from viral_topic_agent.infrastructure.datasource import (
+from infrastructure.datasource import (
     DataRequest,
     DataSourceFailure,
     FailureClassification,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     ChannelCategory,
     ContentIdea,
     DiscoveryResult,
     TimeWindow,
     ViralTemplate,
 )
-from viral_topic_agent.infrastructure.result import Err, Ok, Result
-from viral_topic_agent.analysis.trend_discovery import (
+from infrastructure.result import Err, Ok, Result
+from analysis.trend_discovery import (
     ALL_WINDOWS,
     TrendDiscoveryEngine,
 )

@@ -27,12 +27,12 @@ from datetime import datetime, timedelta, timezone
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.analysis.baseline import compute_baseline_view_count
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.analysis.competitor_tracker import CompetitorTracker
-from viral_topic_agent.infrastructure.datasource import DataSource
-from viral_topic_agent.domain.models import Configuration, VideoStats
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from analysis.baseline import compute_baseline_view_count
+from infrastructure.clock import FakeClock
+from analysis.competitor_tracker import CompetitorTracker
+from infrastructure.datasource import DataSource
+from domain.models import Configuration, VideoStats
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
 
 # Mirror the tracker's spike threshold and baseline cap so the expected set can
 # be recomputed independently (kept in sync with competitor_tracker constants).

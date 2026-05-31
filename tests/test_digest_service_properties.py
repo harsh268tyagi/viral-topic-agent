@@ -25,8 +25,8 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.delivery import InMemoryDeliverer
-from viral_topic_agent.delivery.digest_service import (
+from delivery import InMemoryDeliverer
+from delivery.digest_service import (
     MAX_DELIVERY_ATTEMPTS,
     SECTION_COMPETITOR_SPIKES,
     SECTION_OUTLIERS,
@@ -35,7 +35,7 @@ from viral_topic_agent.delivery.digest_service import (
     STATUS_DELIVERY_FAILED,
     DigestService,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     ChannelCategory,
     CompetitorSpike,
     Confidence,

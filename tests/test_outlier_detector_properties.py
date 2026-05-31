@@ -21,8 +21,8 @@ from datetime import datetime, timedelta, timezone
 from hypothesis import assume, given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.domain.models import VideoStats
-from viral_topic_agent.analysis.outlier_detector import OutlierDetector
+from domain.models import VideoStats
+from analysis.outlier_detector import OutlierDetector
 
 # ---------------------------------------------------------------------------
 # Generators

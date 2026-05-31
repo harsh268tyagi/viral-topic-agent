@@ -24,15 +24,15 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.generation.concept_generator import (
+from generation.concept_generator import (
     MAX_OVERLAY_CHARS,
     MAX_TITLE_CHARS,
     MIN_THUMBNAILS,
     MIN_TITLES,
     ConceptGenerator,
 )
-from viral_topic_agent.generation import InMemoryGenerationProvider
-from viral_topic_agent.domain.models import (
+from generation import InMemoryGenerationProvider
+from domain.models import (
     ChannelCategory,
     ContentIdea,
     TimeWindow,

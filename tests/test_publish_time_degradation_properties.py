@@ -26,14 +26,14 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.infrastructure.datasource import DataSource
-from viral_topic_agent.domain.models import AudienceActivity, Confidence, HourlyActivity
-from viral_topic_agent.analysis.publish_time_predictor import (
+from infrastructure.clock import FakeClock
+from infrastructure.datasource import DataSource
+from domain.models import AudienceActivity, Confidence, HourlyActivity
+from analysis.publish_time_predictor import (
     _pick_peak_window,
     PublishTimePredictor,
 )
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
 
 
 # ---------------------------------------------------------------------------

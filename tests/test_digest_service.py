@@ -11,8 +11,8 @@ examples and edge cases.
 
 import pytest
 
-from viral_topic_agent.delivery import InMemoryDeliverer
-from viral_topic_agent.delivery.digest_service import (
+from delivery import InMemoryDeliverer
+from delivery.digest_service import (
     MAX_DELIVERY_ATTEMPTS,
     SECTION_COMPETITOR_SPIKES,
     SECTION_OUTLIERS,
@@ -22,7 +22,7 @@ from viral_topic_agent.delivery.digest_service import (
     DeliveryResult,
     DigestService,
 )
-from viral_topic_agent.domain.models import (
+from domain.models import (
     ChannelCategory,
     CompetitorSpike,
     Confidence,

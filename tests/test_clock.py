@@ -10,7 +10,7 @@ import pytest
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.infrastructure.clock import Clock, FakeClock, RealClock
+from infrastructure.clock import Clock, FakeClock, RealClock
 
 
 # ---------------------------------------------------------------------------

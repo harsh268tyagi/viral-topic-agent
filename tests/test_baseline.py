@@ -19,8 +19,8 @@ from datetime import datetime, timedelta, timezone
 
 import pytest
 
-from viral_topic_agent.analysis.baseline import compute_baseline_view_count
-from viral_topic_agent.domain.models import Confidence, VideoFormat, VideoStats
+from analysis.baseline import compute_baseline_view_count
+from domain.models import Confidence, VideoFormat, VideoStats
 
 
 # ---------------------------------------------------------------------------

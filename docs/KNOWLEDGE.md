@@ -85,12 +85,12 @@ The system is organized into five layers. Domain logic depends only inward
 
 ### Package layout
 
-Each architectural layer maps to a Python subpackage under
-`src/viral_topic_agent/`:
+Each architectural layer is a top-level Python package directly under `src/`
+(there is no wrapping package):
 
-| Layer | Subpackage | Modules |
-|-------|-----------|---------|
-| Domain | `domain/` | `models` |
+| Layer | Package | Modules |
+|-------|---------|---------|
+| Domain | `domain/` | `models` (also carries `__version__`) |
 | Infrastructure | `infrastructure/` | `clock`, `result`, `datasource`, `resilient_data_source` |
 | Persistence | `persistence/` | `config_store` |
 | Connection | `connection/` | `connection_manager` |
@@ -99,11 +99,12 @@ Each architectural layer maps to a Python subpackage under
 | Delivery | `delivery/` | `deliverer`, `digest_service` |
 | Orchestration | `orchestration/` | `automation_scheduler` |
 
-The `generation` and `delivery` packages re-export their public symbols from
-`__init__.py`, so callers can import either from the package
-(`from viral_topic_agent.generation import ScriptGenerator`) or from the
-specific module (`from viral_topic_agent.generation.script_generator import
-ScriptGenerator`).
+Imports use the layer package directly, e.g. `from domain.models import
+Configuration`, `from infrastructure.clock import RealClock`. The `generation`
+and `delivery` packages re-export their public symbols from `__init__.py`, so
+callers can import either from the package (`from generation import
+ScriptGenerator`) or from the specific module (`from generation.script_generator
+import ScriptGenerator`). The project version is `domain.__version__`.
 
 ---
 

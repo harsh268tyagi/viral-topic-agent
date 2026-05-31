@@ -23,7 +23,7 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.domain.models import (
+from domain.models import (
     BaselineResult,
     ChannelCategory,
     Confidence,
@@ -31,7 +31,7 @@ from viral_topic_agent.domain.models import (
     TimeWindow,
     ViralTemplate,
 )
-from viral_topic_agent.analysis.scoring import CategoryAggregate, ScoreOutcome, compute_idea_score
+from analysis.scoring import CategoryAggregate, ScoreOutcome, compute_idea_score
 
 # ---------------------------------------------------------------------------
 # Strategies

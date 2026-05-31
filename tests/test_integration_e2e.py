@@ -29,10 +29,10 @@ Requirement: 14.3.
 
 from __future__ import annotations
 
-from viral_topic_agent.orchestration.automation_scheduler import STEP_ORDER, AutomationScheduler
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.delivery import EmailDeliverer, SlackDeliverer
-from viral_topic_agent.domain.models import (
+from orchestration.automation_scheduler import STEP_ORDER, AutomationScheduler
+from infrastructure.clock import FakeClock
+from delivery import EmailDeliverer, SlackDeliverer
+from domain.models import (
     AuthorizedChannel,
     ChannelCategory,
     Configuration,
@@ -40,7 +40,7 @@ from viral_topic_agent.domain.models import (
     Schedule,
     StepStatus,
 )
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
 
 from .integration_support import StubDataSource
 from .scheduler_support import TickingClock

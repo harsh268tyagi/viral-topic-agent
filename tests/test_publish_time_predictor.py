@@ -25,19 +25,19 @@ Requirements exercised: 9.4, 9.6.
 
 from __future__ import annotations
 
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.infrastructure.datasource import (
+from infrastructure.clock import FakeClock
+from infrastructure.datasource import (
     DataSource,
     NonTransientError,
     TransientError,
 )
-from viral_topic_agent.domain.models import AudienceActivity, Confidence, HourlyActivity
-from viral_topic_agent.analysis.publish_time_predictor import (
+from domain.models import AudienceActivity, Confidence, HourlyActivity
+from analysis.publish_time_predictor import (
     AudienceDataRetrievalError,
     NoDataError,
     PublishTimePredictor,
 )
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
 
 
 # ---------------------------------------------------------------------------

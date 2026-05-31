@@ -8,13 +8,13 @@ real component tests will build on in later tasks.
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-import viral_topic_agent
+import domain
 
 
 def test_package_importable_and_versioned():
     """The package imports and exposes a version string."""
-    assert isinstance(viral_topic_agent.__version__, str)
-    assert viral_topic_agent.__version__
+    assert isinstance(domain.__version__, str)
+    assert domain.__version__
 
 
 @settings(max_examples=100)

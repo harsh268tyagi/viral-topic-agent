@@ -19,7 +19,7 @@ from __future__ import annotations
 
 import pytest
 
-from viral_topic_agent.domain.models import (
+from domain.models import (
     BaselineResult,
     ChannelCategory,
     ChannelProfile,
@@ -28,7 +28,7 @@ from viral_topic_agent.domain.models import (
     TimeWindow,
     ViralTemplate,
 )
-from viral_topic_agent.analysis.scoring import (
+from analysis.scoring import (
     CategoryAggregate,
     IdeaScorer,
     ScoreOutcome,

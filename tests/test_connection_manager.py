@@ -23,19 +23,19 @@ Requirements exercised: 1.2, 1.3, 1.5, 1.7, 1.8.
 
 from __future__ import annotations
 
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.connection.connection_manager import (
+from infrastructure.clock import FakeClock
+from connection.connection_manager import (
     ConnectionManager,
     InMemoryCredentialStore,
 )
-from viral_topic_agent.infrastructure.datasource import DataOperation, DataRequest
-from viral_topic_agent.domain.models import (
+from infrastructure.datasource import DataOperation, DataRequest
+from domain.models import (
     AuthorizationGrant,
     AuthorizedChannel,
     AuthStatus,
     Configuration,
 )
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
 
 
 # ---------------------------------------------------------------------------

@@ -19,14 +19,14 @@ Requirements exercised: 11.4, 11.5, 11.6.
 
 from __future__ import annotations
 
-from viral_topic_agent.infrastructure.clock import FakeClock
-from viral_topic_agent.infrastructure.datasource import (
+from infrastructure.clock import FakeClock
+from infrastructure.datasource import (
     DataSource,
     NonTransientError,
 )
-from viral_topic_agent.domain.models import ChannelCategory, KeywordMetric
-from viral_topic_agent.infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
-from viral_topic_agent.analysis.seo_analyzer import (
+from domain.models import ChannelCategory, KeywordMetric
+from infrastructure.resilient_data_source import ResilientDataSource, RetryPolicy
+from analysis.seo_analyzer import (
     MIN_ANALYZED_KEYWORDS,
     SEOAnalyzer,
     classify_keyword_gaps,

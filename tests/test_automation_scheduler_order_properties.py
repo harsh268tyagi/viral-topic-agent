@@ -22,8 +22,8 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.orchestration.automation_scheduler import STEP_ORDER
-from viral_topic_agent.domain.models import (
+from orchestration.automation_scheduler import STEP_ORDER
+from domain.models import (
     AuthorizedChannel,
     Configuration,
     Schedule,

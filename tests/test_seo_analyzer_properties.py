@@ -26,8 +26,8 @@ from statistics import median
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.domain.models import KeywordMetric
-from viral_topic_agent.analysis.seo_analyzer import MIN_ANALYZED_KEYWORDS, classify_keyword_gaps
+from domain.models import KeywordMetric
+from analysis.seo_analyzer import MIN_ANALYZED_KEYWORDS, classify_keyword_gaps
 
 
 # ---------------------------------------------------------------------------

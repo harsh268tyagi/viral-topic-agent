@@ -31,8 +31,8 @@ from datetime import datetime, timedelta, timezone
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.analysis.baseline import compute_baseline_view_count
-from viral_topic_agent.domain.models import Confidence, VideoStats
+from analysis.baseline import compute_baseline_view_count
+from domain.models import Confidence, VideoStats
 
 # ---------------------------------------------------------------------------
 # Generators

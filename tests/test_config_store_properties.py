@@ -23,8 +23,8 @@ from __future__ import annotations
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from viral_topic_agent.persistence.config_store import deserialize_config, serialize_config
-from viral_topic_agent.domain.models import (
+from persistence.config_store import deserialize_config, serialize_config
+from domain.models import (
     AuthorizedChannel,
     ChannelCategory,
     Configuration,
