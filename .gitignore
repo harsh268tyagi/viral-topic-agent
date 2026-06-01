@@ -216,3 +216,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local credential files (Real Provider Integration, Requirement 12.4)
+#   Secrets are loaded from a configuration source at runtime; the local .env
+#   file (ignored above) and any local credential file must never be committed.
+*.pem
+*.key
+credentials.json
+client_secret*.json
+*client_secret*.json
+token.json
+*.credentials.json
+.secrets/
+secrets.json
+service-account*.json
